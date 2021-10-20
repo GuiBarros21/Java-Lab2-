@@ -1,6 +1,4 @@
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
+import java.util.*;
 
 public class LabQ3 {
 	
@@ -16,8 +14,10 @@ public class LabQ3 {
 		
 		Collections.sort(arraylist);
 		
-		System.out.println(arraylist);
-		
+		for (Car str:arraylist)
+		{
+			System.out.println(str);
+		}	
 		
 	}
 

@@ -1,9 +1,10 @@
+import java.util.Comparator;
 
 public class Car implements Comparable {
 
-		public String make;
-		public String model;
-		public int year;
+		private String make;
+		private String model;
+		private int year;
 		
 		public Car(String make, String model, int year)
 		{
@@ -38,29 +39,28 @@ public class Car implements Comparable {
 		}
 		
 		
-		public int compareTo(Car comaprecar) {
-			int compareyear =((Car)comaprecar).getYear();
+		
+		public int compareTo(Car comparecar) {
+			int compareyear = ((Car)comparecar).getYear();
+			/* Ascending order */
 			return this.year - compareyear;
 			
 		}
-
+		
 		@Override
 		public String toString() {
 			return "make=" + make + ", model=" + model + ", year=" + year;
 		}
-
-		@Override
-		public int compareTo(Object o) {
-			// TODO Auto-generated method stub
-			return 0;
+		
+		public static Comparator<Car> CarYearComparator = new Comparator<Car>();
+		
+		public int compare(Car c1, Car c2)
+		{
+			int CarYear1 = c1.getYear();
+			int CarYear2 = c2.getYear();
+			
+			return CarYear1.
 		}
-
-		
-		
-		
-		
-	
-		
-		
+			
 	}
 		
