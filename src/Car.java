@@ -44,8 +44,7 @@ public class Car implements Comparable {
 			int compareyear = ((Car)comparecar).getYear();
 			/* Ascending order */
 			return this.year - compareyear;
-			
-		}
+					}
 		
 		@Override
 		public String toString() {
@@ -55,6 +54,12 @@ public class Car implements Comparable {
 		public int compare(Car car1, Car car2)
 		{
 			return Integer.compare(car1.getYear(), car2.getYear());
+		}
+
+		@Override
+		public int compareTo(Object o) {
+			// TODO Auto-generated method stub
+			return 0;
 		}
 
 		
