@@ -52,15 +52,10 @@ public class Car implements Comparable {
 			return "make=" + make + ", model=" + model + ", year=" + year;
 		}
 		
-		public static Comparator<Car> CarYearComparator = new Comparator<Car>();
-		
-		public int compare(Car c1, Car c2)
+		public int compare(Car car1, Car car2)
 		{
-			int CarYear1 = c1.getYear();
-			int CarYear2 = c2.getYear();
-			
-			return CarYear1.
+			return Integer.compare(car1.getYear(), car2.getYear());
 		}
-			
-	}
+
 		
+}
